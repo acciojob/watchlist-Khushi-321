@@ -31,8 +31,8 @@ public class MovieRepository {
 //         git    directorMap.put(director, directorMap.get(director));
             List<String> currentMovies = new ArrayList<String>();
             if(directorMovieMapping.containsKey(director)) currentMovies = directorMovieMapping.get(director);
-//            currentMovies.add(movie);
-//            directorMovieMapping.put(director, currentMovies);
+            currentMovies.add(movie);
+            directorMovieMapping.put(director, currentMovies);
         }
     }
 
