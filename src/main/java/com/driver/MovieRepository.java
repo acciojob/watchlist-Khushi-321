@@ -51,7 +51,7 @@ public class MovieRepository {
     }
 
     public List<String> findAllMovies(){
-        return new ArrayList<>(movieMap.keySet());
+        return new ArrayList<String>(movieMap.keySet());
     }
 
     public void deleteDirector(String director){
@@ -88,5 +88,7 @@ public class MovieRepository {
                 movieMap.remove(movie);
             }
         }
+        directorMap.clear();
+        directorMovieMapping.clear();
     }
 }
