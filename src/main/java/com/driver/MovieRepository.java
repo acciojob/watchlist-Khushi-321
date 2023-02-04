@@ -21,9 +21,11 @@ public class MovieRepository {
         movieMap.put(movie.getName(), movie);
     }
 
-//    public void saveDirector(Director director){
-//        directorMap.put(director.getName(), director);
-//    }
+    public void saveDirector(Director director){
+        directorMap.put(director.getName(), director);
+        directorMap.clear();
+        directorMovieMapping.clear();
+    }
 
     public void saveMovieDirectorPair(String movie, String director){
       if(movieMap.containsKey(movie) && directorMap.containsKey(director)){
